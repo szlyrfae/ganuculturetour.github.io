@@ -20,3 +20,16 @@ function showSlides() {
   // Change image every 2 seconds
   setTimeout(showSlides, 2000);
 }
+
+$(document).ready(function() {
+
+  $(`[unique-script-id="w-w-dm-id"] .btn-box`).click(function() {
+    $(this).parent().children(".overlay").show();
+
+  });
+
+
+  $(`[unique-script-id="w-w-dm-id"] .close`).click(function() {
+    $(".overlay").hide();
+  });
+});

@@ -1,0 +1,93 @@
+.global-caption {
+  position: absolute;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  z-index: 10;
+}
+
+.left-center {
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  text-align: left;
+}
+
+.left-center h1 {
+  font-size: 80px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1.5px;
+}
+
+.left-center p {
+  font-size: 25px;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
+
+.bottom-right {
+  bottom: 10%;
+  right: 12%;
+  text-align: center;
+}
+
+.explore-btn1 a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  padding: 0.5em 2em;
+  border: 5px solid white;
+  transition: 0.02s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+  white-space: nowrap;
+}
+
+.explore-btn1 a::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: white;
+  transition: 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+  z-index: -1;
+  font-weight: bold;
+}
+
+.explore-btn1 a::after {
+  content: "";
+  display: inline-block;
+  background-image: url("https://cdn-icons-png.flaticon.com/128/109/109617.png");
+  position: absolute;
+  top: 0;
+  left: calc(100% - 3em);
+  right: 3em;
+  bottom: 0;
+  background-size: 1.5em;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: right 0.3s cubic-bezier(0.1, 0, 0.1, 1);
+}
+
+.explore-btn1 a:hover {
+  padding: 0.5em 3.5em 0.5em 0.5em;
+}
+
+.explore-btn1 a:hover::before {
+  left: calc(100% - 3em);
+  right: 0;
+  transition: 0.3s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+}
+
+.explore-btn1 a:hover::after {
+  right: 0;
+  transition: right 0.3s 0.2s cubic-bezier(0.1, 0, 0.1, 1);
+}
